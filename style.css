@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: floralwhite;
-
+    color: rgb(30, 34, 43);
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     margin: 0;
 
@@ -24,13 +24,12 @@ body.fade {
 */
 
 nav {
-    float: left;
+    float: right;
     width: 17%;
     height: 100%;
     position: fixed;
     margin: 0;
-    background-color: darkgrey;
-    opacity: 0.8;
+    background-color: rgba(168, 187, 206, 0.7);
     z-index: 9999;
 
 }
@@ -48,16 +47,16 @@ nav {
     display: block;
     padding: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bolder;
     text-decoration: none;
-    color: rgb(29, 29, 29);
+    color: rgb(30, 34, 43);
     transition: transform .2s;
 }
 
 
 .navList:hover {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(30, 34, 43);
     color: whitesmoke;
 }
 
@@ -66,11 +65,14 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .navButton {  
-    color: rgb(29, 29, 29);
+    color: rgb(30, 34, 43);
     margin: 10px;
     padding: 5px;
     font-size: 50px;
@@ -125,7 +127,8 @@ section {
     justify-content: space-around;
     padding-left: 100px;
     padding-right: 100px;
-    margin: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     
 }
 
@@ -134,7 +137,7 @@ section {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     background-color: rgba(226, 242, 255, 0.3);
-    padding 50px;
+    padding: 50px;
 
 }
 
@@ -158,7 +161,42 @@ section {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     border-left: dimgray 2.5px solid;
-    padding: 40px;
+    padding: 50px;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background-color: rgba(226, 242, 255, 0.3);
+    padding: 50px;
+
+}
+
+.con3grid1 {
+    grid-column: 1 / 3;
+    grid-row: 1 /2 ;
+    margin-bottom: 50px;
+
+}
+
+.con3grid2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+    margin: 25px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.con3grid3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-left: dimgray 2.5px solid;
+    padding-left: 40px;
+
 }
 
 .container4 {
@@ -166,7 +204,7 @@ section {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     background-color: rgba(226, 242, 255, 0.3);
-    padding 50px;
+    padding: 50px;
 }
 
 .con4grid1 {
@@ -187,9 +225,9 @@ section {
 .container5 {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     background-color: rgba(226, 242, 255, 0.3);
-    padding 50px;
+    /*padding 50px; */
 
 }
 
@@ -214,24 +252,77 @@ section {
     grid-row: 3 / 4;
 }
 
-.con5grid5 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4 ;
-
-}
-
 .con5grid6 {
     grid-column: 1 / 3;
-    grid-row: 4 / 5;
+    grid-row: 4 / 5 ;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
 }
 
-img {
+.grid6sub1 {
+    grid-column: 1 / 2;
+    grid-row: 1 /2 ;
+}
+
+.grid6sub2 {
+    grid-column: 1 / 2;
+    grid-row: 2 /3 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.con5grid7 {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+    margin: 50px;
+}
+
+
+.imgMe {
 	width: 185px;
 	margin: 30px;
-	border-style: dashed;
-	border-color: black;
+	border-style: solid;
+	border-color: lightgrey;
 	border-radius: 50%;
-	border-width: 5x;
+	border-width: 5px;
+}
+
+.imgCats {
+    height: 350px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.imgTvl {
+    height: 200px;
+    width: auto;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.imgDovah {
+    height: 320px;
+    width: auto;
+}
+
+.imgViolin {
+    height: 320px;
+    width: auto;
+    position: relative;
+    animation-name: violMove;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes violMove {
+    0%   {left:0px; top:0px;}
+    25%  {left:175px; top:0px;}
+    50%  {left:0px; top:0px; }
+    75%  {left: -175px; top: 0px;}
+    100% {left:0px; top:0px;}
 }
 
 button {
@@ -243,11 +334,19 @@ button {
 	padding-right: 20px;
 	font-size: 30px;
 	font-style: bold;
-    background-color: rgb(29, 29, 29);
+    background-color: rgba(168, 187, 206, 1);
     border-radius: 5px;
-    box-shadow: 1.5px 1.5px 3px rgb(29, 29, 29);
-    color: lightgray;
+    border: 0px;
+    box-shadow: 1.5px 1.5px 3px rgba(168, 187, 206, 1);
+    color: rgb(30, 34, 43);
+    transition: transform .2s;
 
+}
+
+button:hover {
+    background-color: rgb(30, 34, 43);
+    color: whitesmoke;
+    transform: scale(1.5);
 }
 
 table  {
@@ -281,11 +380,31 @@ h2 {
     margin: 25px;
 }
 
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.h3Hobs {
+    padding: 20px;
+}
+
+h4 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 p {
     font-size: 30px;
 }
 
 .smallP {
     font-size: 22px;
+}
+
+.expP {
+    font-size: 20px;
 }
 
